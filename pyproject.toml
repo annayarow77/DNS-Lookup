@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dnslookup-cli"
+version = "0.1.0"
+description = "Look up DNS records from the terminal"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["dnspython[doh]>=2.6,<3"]
+
+[project.scripts]
+dnslookup = "dnslookup.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
